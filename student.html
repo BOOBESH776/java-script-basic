@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var t = parseInt(prompt("Enter mark:"));
+        var e = parseInt(prompt("Enter mark:"));
+        var m = parseInt(prompt("Enter mark:"));
+        var c = parseInt(prompt("Enter mark:"));
+        var tot = t + e + m + c;
+        document.write("total mark:" + tot);
+        document.write("<br>");
+        var avg = tot / 3;
+        document.write("avg mark:" + avg);
+        document.write("<br>");
+        if (t >= 35 && e >= 35 && m >= 35 && c >= 35) {
+            document.write("pass all the subject");
+            document.write("<br>");
+
+            if (tot >= 100) {
+                document.write("good");
+            }
+            else {
+                document.write("not bad");
+            }
+        }
+        else {
+            document.write("fail");
+        }
+    </script>
+</body>
+
+</html>

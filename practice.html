@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Password:</label>
+    <input type="password" name="" id="pw"><br><br>
+    <label for="">confirm Password:</label>
+    <input type="password" name="" id="cpw"><br><br>
+    <button onclick="passwordcheck()">Submit</button>
+    <script lang="javascript">
+        function passwordcheck(){
+            var pw = document.getElementById("pw").value;
+            var cpw = document.getElementById("cpw").value;
+            if(pw==cpw){
+                alert("crt");
+            }
+            else{
+                alert("incrt");
+            }
+        }
+    </script>
+</body>
+
+</html>

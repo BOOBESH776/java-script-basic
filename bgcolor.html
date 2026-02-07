@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    Enter bgColor: <input type="text" id="col">
+    <button onclick="changebg()">submit</button>
+    <script lang="javascript">
+        function changebg() {
+            var color = document.getElementById("col").value;
+            document.body.style.backgroundColor = color;
+        }
+    </script></body>
+
+</html>
