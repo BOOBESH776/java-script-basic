@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">hello</h1>
+    <button id="btn">click me</button>
+
+    <script>
+        const title = document.getElementById("title");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", ()=>{
+            title.textContent = "btn clicked";
+        });
+    </script>
+</body>
+</html>
