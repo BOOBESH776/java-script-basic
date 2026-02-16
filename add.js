@@ -8,8 +8,7 @@ let add = (a,b) => a+b;
 
 console.log(add(3,4));
 
-function age(){
-    let age = 20;
+function checkage(age){
     if(age>=18){
         console.log("eligiable")
     }
@@ -17,7 +16,7 @@ function age(){
         console.log("not")
     }
 }
-age();
+checkage(16);
 
 function greet(name){
     console.log("hello "+name);
