@@ -1,12 +1,20 @@
-//Ordering food at a restaurant.
+function placeOrder(callback) {
+    console.log("🧾 Order placed");
 
-function orderfood(){
-    console.log("order dosa");
-}setInterval(orderfood, 5000);
-
-dosome();
-function dosome(){
-    console.log("do some work");
+    // chef preparing food (takes time)
+    setTimeout(() => {
+        console.log("👨‍🍳 Food is ready");
+        callback();
+    }, 3000);
 }
 
-orderfood();
+function serveFood() {
+    console.log("🍽️ Server brings the food");
+}
+
+// place order
+placeOrder(serveFood);
+
+// do other things while waiting
+console.log("📱 Sitting and scrolling phone...");
+console.log("💬 Talking with friends...");
