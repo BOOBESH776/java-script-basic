@@ -1,3 +1,5 @@
+//user object with properties and methods
+
 let user1 = {
     name: "John",
     age: "30",
@@ -42,4 +44,16 @@ user1.login(); // Output: User logged in
 user2.loginout(); // Output: User logged out
 user3.login(); // Output: User logged in
 
+//class
 
+class User {
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+}
+
+let userone = new User("jhon",30);
+let usertwo = new User("jaya",25);
