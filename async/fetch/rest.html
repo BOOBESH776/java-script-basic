@@ -8,13 +8,17 @@
 </head>
 
 <body>
-    <pre id="text"></pre>
+    <input id="text">
+    <button onclick="rest()">Submit</button>
 
     <script lang="javascript">
-        fetch('https://dummyjson.com/products')
-            .then(res => res.json())
-            .then(data => console.log(data.products[3].title))
-            .catch(error => console.log("error in product"))
+        function rest(){
+            var data = document.getElementById("text").value;
+            fetch('https://dummyjson.com/products')
+                .then(res => res.json())
+                .then(jk => console.log(jk.products[data].title))
+                .catch(error => console.log("error in product"))
+        }
     </script>
 </body>
 
