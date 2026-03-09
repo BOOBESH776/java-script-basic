@@ -14,7 +14,7 @@
         function rest(){
             var data = document.getElementById("text").value;
             fetch('https://dummyjson.com/products')
-                .then(res => res.json())
+                .then(res =>res.json())
                 .then(jk => console.log(jk.products[data].title))
                 .catch(error => console.log("error in product"))
         }
