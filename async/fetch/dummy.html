@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" id="user">
+
+    <button onclick="api()">Submit</button>
+    <p id="data"></p>
+    <script lang="javascript">
+        function api() {
+            data = document.getElementById("user").value;
+            let api = fetch('https://dummyjson.com/products')
+                .then(api => api.json())
+                .then(jk => {
+                    let ans = document.getElementById("data");
+                    ans.textContent =jk.products[data].title;
+                })
+                .catch(error => console.log(error))
+        }
+    </script>
+</body>
+
+</html>
