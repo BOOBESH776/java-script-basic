@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .card {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="gallery">
+    </div>
+
+    <script>
+        let gallery = document.getElementById("gallery");
+        let img_name = document.getElementById("name");
+        let img_gallery = document.getElementById("img-gallery");
+        let img = fetch('images_api.json')
+
+            .then(js => js.json())
+
+            .then(jk => {
+                jk.images.forEach(item => {
+                    gallery.innerHTML += `
+                    <div class = "card">
+                        <div>
+                        <div>
+                            <img src ="${item.image}">
+                        </div>
+                        <div>
+                            <p>${item.name}</p>
+                        </div>
+                    </div>`;
+                })
+            });
+    </script>
+</body>
+
+</html>
