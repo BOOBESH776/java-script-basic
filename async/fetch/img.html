@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="user">
+
+    <button onclick="api()">Submit</button>
+    <img src="" id="img">
+
+    <script lang="javascript">
+        function api(){
+            let input = document.getElementById("user").value;
+            let data = fetch('images_api.json')
+            .then(js => js.json())
+            .then(jk =>{
+                img = document.getElementById("img");
+                img.src = jk.images[input].image;
+            })
+            .catch(error => {
+                if(input>10){
+                    alert("enter the number(0-9)");
+                }
+            })
+        }
+    </script>
+</body>
+
+</html>
