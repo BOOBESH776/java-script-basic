@@ -1,9 +1,9 @@
-const a = new Set([1,2,3]);
+const a = new Set([1, 2, 3]);
 console.log(a);
 
 
 const num = new Set();
- 
+
 num.add(10);
 num.add(20);
 num.add(30);
