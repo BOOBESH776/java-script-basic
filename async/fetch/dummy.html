@@ -12,15 +12,25 @@
     <input type="text" id="user">
 
     <button onclick="api()">Submit</button>
-    <p id="data"></p>
+
+    <h3>Details</h3>
+    <div id="bio"></div>
+    <!-- <p id="data"></p> -->
     <script lang="javascript">
         function api() {
             data = document.getElementById("user").value;
+            let bio = document.getElementById("bio");
             let api = fetch('https://dummyjson.com/products')
                 .then(api => api.json())
                 .then(jk => {
-                    let ans = document.getElementById("data");
-                    ans.textContent =jk.products[data].title;
+                    bio.innerHTML = 
+                    `<p>Name : ${jk.products[data].title}</p>
+                    <p>Name : ${jk.products[data].description}</p>
+                    <p>category : ${jk.products[data].category}</p>
+                    <p>price : ${jk.products[data].price}</p>
+                    <p>discountPercentage : ${jk.products[data].discountPercentage}</p>
+                    <p>rating : ${jk.products[data].rating}</p>
+                    <p>stock : ${jk.products[data].stock}</p>`;
                 })
                 .catch(error => console.log(error))
         }
