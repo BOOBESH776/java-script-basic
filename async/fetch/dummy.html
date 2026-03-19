@@ -24,7 +24,7 @@
                 .then(api => api.json())
                 .then(jk => {
                     if (!jk.products[data]) {
-                        bio.innerHTML = `<h3>We Dont Have a Product`;
+                        bio.innerHTML = `<h3>We Dont Have a Product</h3>`;
                     }
                     else {
                         bio.innerHTML =
