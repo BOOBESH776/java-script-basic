@@ -29,12 +29,22 @@
                     else {
                         bio.innerHTML =
                         `<p>Name : ${jk.products[data].title}</p>
-                        <p>Name : ${jk.products[data].description}</p>
+                        <p>description : ${jk.products[data].description}</p>
                         <p>category : ${jk.products[data].category}</p>
                         <p>price : ${jk.products[data].price}</p>
                         <p>discountPercentage : ${jk.products[data].discountPercentage}</p>
                         <p>rating : ${jk.products[data].rating}</p>
-                        <p>stock : ${jk.products[data].stock}</p>`;
+                        <p>stock : ${jk.products[data].stock}</p>
+                        <p>tags : ${jk.products[data].tags}</p>
+                        <p>brand : ${jk.products[data].brand}</p> 
+                        <p>sku : ${jk.products[data].sku}</p> 
+                        <p>weight : ${jk.products[data].weight}</p> 
+                        <p>dimensions : ${jk.products[data].dimensions}</p> 
+                        <p>warrantyInformation : ${jk.products[data].warrantyInformation}</p> 
+                        <p>shippingInformation : ${jk.products[data].shippingInformation}</p>  
+                        <p>availabilityStatus : ${jk.products[data].availabilityStatus}</p>    
+                        <img src = "${jk.products[data].images}">
+                        <p>thumbnail : ${jk.products[data].thumbnail}</p> `;
                     }
                 })
                 .catch(error => console.log(error))
