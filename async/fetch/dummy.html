@@ -23,14 +23,19 @@
             let api = fetch('https://dummyjson.com/products')
                 .then(api => api.json())
                 .then(jk => {
-                    bio.innerHTML = 
-                    `<p>Name : ${jk.products[data].title}</p>
-                    <p>Name : ${jk.products[data].description}</p>
-                    <p>category : ${jk.products[data].category}</p>
-                    <p>price : ${jk.products[data].price}</p>
-                    <p>discountPercentage : ${jk.products[data].discountPercentage}</p>
-                    <p>rating : ${jk.products[data].rating}</p>
-                    <p>stock : ${jk.products[data].stock}</p>`;
+                    if (!jk.products[data]) {
+                        bio.innerHTML = `<h3>We Dont Have a Product`;
+                    }
+                    else {
+                        bio.innerHTML =
+                        `<p>Name : ${jk.products[data].title}</p>
+                        <p>Name : ${jk.products[data].description}</p>
+                        <p>category : ${jk.products[data].category}</p>
+                        <p>price : ${jk.products[data].price}</p>
+                        <p>discountPercentage : ${jk.products[data].discountPercentage}</p>
+                        <p>rating : ${jk.products[data].rating}</p>
+                        <p>stock : ${jk.products[data].stock}</p>`;
+                    }
                 })
                 .catch(error => console.log(error))
         }
