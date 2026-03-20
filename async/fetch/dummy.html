@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .img {
+            width: 250px;
+            height: 250px;
+        }
+    </style>
 </head>
 
 <body>
@@ -24,11 +30,11 @@
                 .then(api => api.json())
                 .then(jk => {
                     if (!jk.products[data]) {
-                        bio.innerHTML = `<h3>We Dont Have a Product</h3>`;
+                        bio.innerHTML = `<h3>We Don't Have a Product</h3>`;
                     }
                     else {
                         bio.innerHTML =
-                        `<p>Name : ${jk.products[data].title}</p>
+                            `<p>Name : ${jk.products[data].title}</p>
                         <p>description : ${jk.products[data].description}</p>
                         <p>category : ${jk.products[data].category}</p>
                         <p>price : ${jk.products[data].price}</p>
@@ -39,12 +45,29 @@
                         <p>brand : ${jk.products[data].brand}</p> 
                         <p>sku : ${jk.products[data].sku}</p> 
                         <p>weight : ${jk.products[data].weight}</p> 
-                        <p>dimensions : ${jk.products[data].dimensions}</p> 
+                        <div>
+                            <h3>dimensions :</h3> 
+                            <p>height : ${jk.products[data].dimensions.height}</p>
+                            <p>width : ${jk.products[data].dimensions.width}</p>
+                            <p>depth : ${jk.products[data].dimensions.depth}</p>
+                        </div>
+                        <div> 
+                            ${jk.products[data].reviews.map(review =>
+                                `<h3>review</h3>
+                                <p>rating : ${review.rating}</p>
+                                <p>comment : ${review.comment}</p>
+                                <p>reviewerName : ${review.reviewerName}</p>
+                                <p>reviewerEmail : ${review.reviewerEmail}</p>`
+                            )}
+                        </div>
                         <p>warrantyInformation : ${jk.products[data].warrantyInformation}</p> 
                         <p>shippingInformation : ${jk.products[data].shippingInformation}</p>  
                         <p>availabilityStatus : ${jk.products[data].availabilityStatus}</p>    
-                        <img src = "${jk.products[data].images}">
-                        <p>thumbnail : ${jk.products[data].thumbnail}</p> `;
+                        <img class="img" src = "${jk.products[data].images}">
+                        <p>thumbnail : ${jk.products[data].thumbnail}</p> 
+                        
+                        
+                        `;
                     }
                 })
                 .catch(error => console.log(error))
