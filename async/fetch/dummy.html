@@ -60,6 +60,13 @@
                                 <p>reviewerEmail : ${review.reviewerEmail}</p>`
                             )}
                         </div>
+                        <div>
+                            <h3>meta :</h3> 
+                            <p>createdAt : ${jk.products[data].meta.createdAt}</p>
+                            <p>updatedAt : ${jk.products[data].meta.updatedAt}</p>
+                            <p>barcode : ${jk.products[data].meta.barcode}</p>
+                            <img src = "${jk.products[data].meta.qrCode}">
+                        </div>
                         <p>warrantyInformation : ${jk.products[data].warrantyInformation}</p> 
                         <p>shippingInformation : ${jk.products[data].shippingInformation}</p>  
                         <p>availabilityStatus : ${jk.products[data].availabilityStatus}</p>    
