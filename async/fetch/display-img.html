@@ -8,8 +8,9 @@
     <style>
         #card {
             width: 300px;
-            height: max-content;
+            height: 360px;
             border: 2px solid #000;
+            display: none;
         }
 
         .card-img {
@@ -21,7 +22,9 @@
             width: 200px;
             height: 200px;
         }
-
+        .product-detail{
+            padding: 0px;
+        }
         .title {
             margin-left: 10px;
         }
@@ -34,6 +37,14 @@
 
         .dis-price {
             text-decoration: line-through;
+        }
+        .buy{
+            width: 300px;
+            height: 40px;
+            padding: 2px;
+            background-color: antiquewhite;
+            color: #000;
+            border: none;
         }
     </style>
 </head>
@@ -48,6 +59,7 @@
         function displayimg() {
             let data = document.getElementById('data').value;
             let card = document.getElementById("card");
+            card.style.display = "block";
             let api = fetch('https://dummyjson.com/products')
                 .then(res => res.json())
                 .then(product => {
@@ -61,7 +73,7 @@
                                 <p class="dis-price"> ₹ ${product.products[data].price}</p>
                                 <p class=""> ₹ ${product.products[data].discountPercentage}</p>
                             </span>
-
+                            <button class="buy">BuyNow</button>
                         </div>
                     `
                 })
