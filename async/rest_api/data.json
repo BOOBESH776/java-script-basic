@@ -1,7 +1,9 @@
 {
-    [
-        "name":"sri",
-        "age":10,
-        "img":
+    "user": [
+        {
+            "name": "sri",
+            "age": 10,
+            "img": "logo.jpg"
+        }
     ]
 }
