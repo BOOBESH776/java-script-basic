@@ -5,16 +5,17 @@ body{
     align-items: center;
 }
 
-
 .form-container{
     background-color: antiquewhite;
     padding: 10px;
     display: inline-block;
     border-radius: 10px;
 }
+
 .form-container input{
     padding: 5px;
 }
+
 button{
     width: 175px;
     padding: 5px;
