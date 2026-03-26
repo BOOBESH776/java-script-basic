@@ -1,0 +1,17 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-container{
+    background-color: antiquewhite;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 10px;
+}
+.form-container input{
+    padding: 5px;
+}
