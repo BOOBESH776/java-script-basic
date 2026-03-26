@@ -15,3 +15,9 @@ body{
 .form-container input{
     padding: 5px;
 }
+button{
+    width: 175px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+}
