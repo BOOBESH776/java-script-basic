@@ -7,12 +7,11 @@ function vaild() {
     card.innerHTML =
 
         `<div class="head">
-        <h2>${site_name}</h2>
-    </div>
+            <h2>${site_name.value}</h2>
+        </div>
     
     <div class="tag">
-        <a href = "${site_url}">${site_url}</a>
-    </div>
-    `
+        <a href = "${site_url.value}">${site_url.value}</a>
+    </div>`
 
 }
