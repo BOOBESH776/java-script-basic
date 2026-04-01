@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="text" name="" id="search" autofocus>
+
+    <ul id="list">
+        <li>apple</li>
+        <li>banana</li>
+        <li>orange</li>
+        <li>grape</li>
+        <li>kiwi</li>
+    </ul>
+
+    <script>
+        const search = document.getElementById('search');
+        const li = document.querySelectorAll('#list li');
+        li.forEach(li => {
+            li.style.display = "none";
+        })
+        search.addEventListener("keyup", () => {
+            let value = search.value.toLowerCase();
+            li.forEach(li => {
+                let text = li.textContent.toLowerCase();
+                if (text.includes(value)) {
+                    li.style.display = "block";
+                }
+                else {
+                    li.style.display = "none";
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>
