@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 10px;
+            margin-top: 10px;
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <h2>Library Management</h2>
+        <input type="search" id="search" placeholder="Book Name...">
+        <p id="result"></p>
+    </div>
+
+    <script>
+
+
+        let book = fetch('https://apis.ccbp.in/book-store/')
+            .then(res => res.json())
+            .then(data => {
+                const search = document.getElementById('search');
+                let result = document.getElementById('result');
+                search.addEventListener('keyup', () => {
+
+                    const value = search.value.toLowerCase();
+
+                    data.search_results.forEach(element => {
+
+                        if (element.title.toLowerCase().includes(value)) {
+                            result.textContent = element.title;
+                        }
+                        else {
+                            result.textContent = "No results found";
+                        }
+                    });
+                })
+            })
+
+    </script>
+</body>
+
+</html>
