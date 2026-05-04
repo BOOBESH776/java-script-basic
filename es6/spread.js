@@ -15,3 +15,8 @@ let person2 = {name : "alice" ,age :18};
 
 let merges = {...person,...person2};
 console.log(merges);  //{ name: 'alice', age: 18 }
+
+let [first, second, third,...other] = [1,2,3,4,5,6,7];
+console.log(first); //1
+console.log(second); //2
+console.log(...other); //4567
